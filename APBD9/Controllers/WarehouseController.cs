@@ -17,7 +17,7 @@ public class WarehouseController:ControllerBase
         _warehouseService = warehouseService;
     }
 
-    [HttpGet("{id}/rentals")]
+    [HttpPost]
     public async Task<IActionResult> PostObject(Product_Warehouse product_warehouse)
     {
         int price = await _warehouseService.DoesProductExist(product_warehouse.IdProduct);
